@@ -37,10 +37,8 @@ startButton.addEventListener("click", (event) => {
 studentSelect.addEventListener('input', () => {
     if (studentSelect.value === 'yes') {
         secondForm.style.display = 'block';
-        // seventhForm.style.display = (sportType.value !== '') ? 'block' : 'none';
     }
     else if (studentSelect.value === 'no') {
-        // seventhForm.style.display = 'block';
         for (let i = 0; i < inputs.length - 1; i++) {
             inputs[i].value = '';
         }
@@ -87,11 +85,9 @@ studyTime.addEventListener('input', () => {
         for (let i = 5; i < forms.length - 1; i++) {
             forms[i].style.display = 'none';
         }
-        // seventhForm.style.display = (sportType.value !== '') ? 'block' : 'none';
     }
     else if (parseInt(studyTime.value) < 4) {
         degreeSelect.value = '';
-        // seventhForm.style.display ='block';
         for (let i = 4; i < forms.length - 1; i++) {
             forms[i].style.display = 'none';
         }
@@ -99,26 +95,21 @@ studyTime.addEventListener('input', () => {
 });
 degreeSelect.addEventListener('input', () => {
     if (degreeSelect.value === 'yes') {
-        // seventhForm.style.display ='block';
         sixthForm.style.display = 'none';
         repeatedYearSelect.value = '';
     }
     else if (degreeSelect.value === 'no') {
         sixthForm.style.display = 'block';
-        // seventhForm.style.display = (sportType.value !== '') ? 'block' : 'none';
     }
     else if (degreeSelect.value === '') {
-        // seventhForm.style.display ='block';
         sixthForm.style.display = 'none';
         repeatedYearSelect.value = '';
     }
 });
 repeatedYearSelect.addEventListener('input', () => {
     if (repeatedYearSelect.value !== '') {
-        // seventhForm.style.display = 'block'
     }
     else {
-        // seventhForm.style.display = 'none'
     }
 });
 let storedFormData = [];
@@ -177,16 +168,3 @@ submitButton.addEventListener('click', () => {
 });
 const getStoredFormData = JSON.parse(localStorage.getItem('formData'));
 console.log(getStoredFormData);
-function foo() {
-    return {
-        bar: "hello"
-    };
-}
-function foo1() {
-    return;
-    {
-        bar: "hello";
-    }
-}
-console.log(foo());
-console.log(foo1());
