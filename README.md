@@ -1,4 +1,4 @@
-# Profil Software Recruitment Task
+# Form builder 
 This project is a form builder application written in TypeScript and accompanied by 24 unit tests.
 
 # Author - Adriana Kozłowska
